@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Speakers - ICTYVM 2025</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Additional Styles for the Speakers Page */
+    .speakers-section {
+      padding: 60px 20px;
+      background-color: #f7f7f7;
+      text-align: center;
+    }
+
+    .speakers-section h2 {
+      font-size: 2.5rem;
+      color: #333;
+      margin-bottom: 40px;
+    }
+
+    .speakers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .speaker-card {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.6s forwards;
+    }
+
+    .speaker-card img {
+      width: 100%;
+      height: auto;
+      border-bottom: 3px solid #f1f1f1;
+    }
+
+    .speaker-card h3 {
+      font-size: 1.5rem;
+      color: #333;
+      margin: 20px;
+      text-align: center;
+    }
+
+    .speaker-card p {
+      font-size: 1rem;
+      color: #555;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    /* Staggering animation for each card */
+    .speaker-card:nth-child(1) {
+      animation-delay: 0.2s;
+    }
+
+    .speaker-card:nth-child(2) {
+      animation-delay: 0.4s;
+    }
+
+    .speaker-card:nth-child(3) {
+      animation-delay: 0.6s;
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">ICTYVM 2025</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="speakers.html" class="active">Speakers</a>
+      <a href="callforpapers.html">Call for Papers</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="registration.html">Register</a>
+      <a href="payment.html">Payment</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Speakers Section -->
+  <section class="speakers-section">
+    <h2>Our Keynote Speakers</h2>
+    <div class="speakers-grid">
+      <div class="speaker-card">
+        <img src="assets/images/speaker1.jpg" alt="Dr. Meera Raghavan">
+        <h3>Dr. Meera Raghavan</h3>
+        <p>Ayurveda & Yoga Researcher</p>
+        <p>Topic: "Scientific Healing in Traditional Systems"</p>
+      </div>
+
+      <div class="speaker-card">
+        <img src="assets/images/speaker2.jpg" alt="Prof. Rajan Varma">
+        <h3>Prof. Rajan Varma</h3>
+        <p>Varma Specialist, TNSC</p>
+        <p>Topic: "Reviving Varma Science for Modern Healthcare"</p>
+      </div>
+
+      <div class="speaker-card">
+        <img src="assets/images/speaker3.jpg" alt="Dr. Lisa Chen">
+        <h3>Dr. Lisa Chen</h3>
+        <p>Neuroscientist, Harvard University</p>
+        <p>Topic: "Bridging Ancient Healing with Modern Neuroscience"</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 ICTYVM. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

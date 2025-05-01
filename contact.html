@@ -1,0 +1,69 @@
+<!-- contact.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - ICTYVM 2025</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">ICTYVM 2025</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="speakers.html">Speakers</a>
+      <a href="callforpapers.html">Call for Papers</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="registration.html">Register</a>
+      <a href="payment.html">Payment</a>
+      <a href="contact.html" class="active">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Contact Section -->
+  <section class="contact-page">
+    <h1 class="page-heading">Contact Us</h1>
+
+    <div class="contact-content">
+      <div class="contact-info-box">
+        <h2>Get in Touch</h2>
+        <p>If you have questions about ICTYVM 2025, feel free to reach out!</p>
+        
+        <div class="info-line"><i class="fas fa-envelope"></i> info@ictyvm2025.org</div>
+        <div class="info-line"><i class="fas fa-phone"></i> +91 98765 43210</div>
+        <div class="info-line"><i class="fas fa-map-marker-alt"></i> International Youth Centre (IYC),<br>Jalan Yaacob Latif, Bandar Tun Razak, Kuala Lumpur</div>
+
+        <div class="map-container">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.10817317463!2d101.7285679!3d3.1005844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc3769e2b7d7cd%3A0x80f7a0df65f8e912!2sInternational%20Youth%20Centre!5e0!3m2!1sen!2smy!4v1682071730033!5m2!1sen!2smy" 
+            width="100%" height="200" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+      </div>
+
+      <div class="contact-form-box">
+        <h2>Send a Message</h2>
+        <form action="https://api.web3forms.com/submit" method="POST" id="contactForm">
+          <input type="hidden" name="access_key" value="6131165c-3ad9-4d2f-a286-01babd69ac4e" />
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+        <p id="contactSuccess" style="display:none; color: green;">✅ Message sent successfully!</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 ICTYVM. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

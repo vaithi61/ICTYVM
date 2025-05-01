@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register - ICTYVM 2025</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">ICTYVM 2025</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="speakers.html">Speakers</a>
+      <a href="callforpapers.html">Call for Papers</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="registration.html" class="active">Register</a>
+      <a href="payment.html">Payment</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Registration Form -->
+  <section>
+    <h2>Register for the Conference</h2>
+    <form action="https://api.web3forms.com/submit" method="POST" id="registrationForm">
+      <input type="hidden" name="access_key" value="6131165c-3ad9-4d2f-a286-01babd69ac4e" />
+      <input type="hidden" name="from_name" value="ICTYVM 2025 Registration" />
+      <input type="hidden" name="subject" value="Thank you for registering for ICTYVM 2025!" />
+      <input type="hidden" name="replyto" value="email" />
+      
+      <input type="text" name="name" placeholder="Full Name" required />
+      <input type="email" name="email" placeholder="Email Address" required />
+      <input type="text" name="affiliation" placeholder="Affiliation / Institution" required />
+      <select name="category" required>
+        <option value="" disabled selected>Select Category</option>
+        <option value="student">Student</option>
+        <option value="professional">Professional</option>
+        <option value="researcher">Researcher</option>
+      </select>
+      
+      <button type="submit">Submit Registration</button>
+    </form>
+
+    <!-- Success Message -->
+    <p id="registrationSuccess" style="display:none; margin-top: 1rem; color: green;">Registration submitted successfully! Thank you for registering for ICTYVM 2025.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 ICTYVM. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
