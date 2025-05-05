@@ -15,6 +15,7 @@
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="speakers.html">Speakers</a>
+      <a href="committee.html">Committee</a>
       <a href="callforpapers.html">Call for Papers</a>
       <a href="schedule.html">Schedule</a>
       <a href="registration.html" class="active">Register</a>
@@ -25,29 +26,29 @@
 
   <!-- Registration Form -->
   <section>
-    <h2>Register for the Conference</h2>
-    <form action="https://api.web3forms.com/submit" method="POST" id="registrationForm">
-      <input type="hidden" name="access_key" value="6131165c-3ad9-4d2f-a286-01babd69ac4e" />
-      <input type="hidden" name="from_name" value="ICTYVM 2025 Registration" />
-      <input type="hidden" name="subject" value="Thank you for registering for ICTYVM 2025!" />
-      <input type="hidden" name="replyto" value="email" />
-      
-      <input type="text" name="name" placeholder="Full Name" required />
-      <input type="email" name="email" placeholder="Email Address" required />
-      <input type="text" name="affiliation" placeholder="Affiliation / Institution" required />
-      <select name="category" required>
-        <option value="" disabled selected>Select Category</option>
-        <option value="student">Student</option>
-        <option value="professional">Professional</option>
-        <option value="researcher">Researcher</option>
-      </select>
-      
-      <button type="submit">Submit Registration</button>
-    </form>
-
-    <!-- Success Message -->
-    <p id="registrationSuccess" style="display:none; margin-top: 1rem; color: green;">Registration submitted successfully! Thank you for registering for ICTYVM 2025.</p>
-  </section>
+    
+    <div class="form-container">
+      <h2>Registration Form</h2>
+      <form id="registrationForm">
+        <input type="text" id="name" placeholder="Full Name" required />
+        <input type="email" id="email" placeholder="Email ID" required />
+        <input type="text" id="institution" placeholder="Institution" required />
+        
+        <select id="category" required>
+          <option value="" disabled selected>Select Category</option>
+          <option value="student">Student</option>
+          <option value="professional">Professional</option>
+          <option value="researcher">Researcher</option>
+        </select>
+  
+        <input type="file" id="fileUpload" accept="application/pdf" required />
+  
+        <button type="submit">Submit Registration</button>
+      </form>
+    </div>
+  
+  
+    </section>
 
   <!-- Footer -->
   <footer>

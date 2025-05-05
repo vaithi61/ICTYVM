@@ -30,59 +30,29 @@ setInterval(updateCountdown, 1000);
 updateCountdown();
 
 
-document.getElementById("registrationForm").addEventListener("submit", function (e) {
-  e.preventDefault(); // Prevent default form submission
-  const form = e.target;
-  const formData = new FormData(form);
+const form = document.getElementById('registrationForm');
+const popup = document.getElementById('popup');
 
-  // Basic validation
-  const name = form.name.value.trim();
-  const email = form.email.value.trim();
-  const affiliation = form.affiliation.value.trim();
-  const category = form.category.value;
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
 
-  if (!name || !email || !affiliation || !category) {
-    alert("Please fill out all required fields.");
+  const fileInput = document.getElementById('fileUpload');
+  const file = fileInput.files[0];
+
+  if (!file || file.type !== 'application/pdf') {
+    alert('Please upload a valid PDF file.');
     return;
   }
 
-  const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-  if (!email.match(emailPattern)) {
-    alert("Please enter a valid email address.");
-    return;
-  }
+  // Simulate successful registration
+  popup.style.display = 'block';
 
-  // Submit form data
-  fetch("https://api.web3forms.com/submit", {
-    method: "POST",
-    body: formData
-  }).then(response => {
-    if (response.ok) {
-      form.reset();
-      document.getElementById("registrationSuccess").style.display = "block";
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    } else {
-      alert("Oops! Something went wrong. Please try again.");
-    }
-  }).catch(error => {
-    console.error(error);
-    alert("There was an error submitting the form. Please try again later.");
-  });
+  setTimeout(() => {
+    popup.style.display = 'none';
+    form.reset();
+  }, 3000);
 });
 
-
-
-document.addEventListener("DOMContentLoaded", () => {
-  const regForm = document.getElementById("registrationForm");
-  if (regForm) {
-    regForm.addEventListener("submit", function (e) {
-      e.preventDefault();
-      // Simulate successful submission
-      document.getElementById("registrationSuccess").style.display = "block";
-      regForm.reset();
-    });
-  }
-});
 
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("contactForm");
