@@ -71,6 +71,46 @@ nav .nav-links a:hover {
   margin-bottom: 30px;
 }
 
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #9dc9d4;
+  border-bottom: 1px solid #ddd;
+}
+
+.organizer, .association {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.organizer h3, .association h3 {
+  margin: 0;
+  font-size: 1.1em;
+  color: #333;
+}
+
+.organizer a, .association a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #0066cc;
+  margin-top: 5px;
+}
+
+.logo-img {
+  width: 50px; /* Adjust size as needed */
+  height: auto;
+  margin-right: 10px;
+}
+
+.association {
+  align-items: flex-end;
+  text-align: right;
+}
+
 .countdown {
   font-size: 2rem;
   font-weight: bold;
