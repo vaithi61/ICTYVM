@@ -1,5 +1,4 @@
 // script.js
-
 function updateCountdown() {
   const eventDate = new Date("August 15, 2025 00:00:00").getTime();
   const now = new Date().getTime();
@@ -28,6 +27,7 @@ function updateCountdown() {
 
 setInterval(updateCountdown, 1000);
 updateCountdown();
+
 
 
 const form = document.getElementById('registrationForm');
