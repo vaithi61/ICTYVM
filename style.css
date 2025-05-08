@@ -26,7 +26,7 @@ nav {
   text-align: center;
 }
 
-nav .logo {
+nav .logoa {
   color: white;
   font-size: 24px;
   font-weight: bold;
@@ -107,7 +107,7 @@ nav + .hero {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 0;
 }
 
 .organizer, .association {
@@ -233,6 +233,40 @@ nav + .hero {
   background-color: #e67e22;
   transition: background-color 0.3s ease;
 }
+
+.logo-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 40px 0;
+}
+
+.logo-left,
+.logo-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.logo {
+  width: 100px; /* Ensure all logos are 100px wide */
+  height: 100px; /* Ensure all logos are 100px tall */
+  object-fit: contain; /* Maintain aspect ratio while fitting in the box */
+}
+
+/* Tab Logo 1 (move right) */
+.logo-1 {
+  margin-left: 30px; /* adjust value as needed */
+}
+
+/* Backspace Logo 3 (move left) */
+.logo-3 {
+  margin-left: -150px; /* adjust value as needed */
+}
+
+
+
+
 /* Important Dates */
 .important-dates {
   margin-top: 2rem;
